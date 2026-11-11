@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Selected Works · Aadarsh Baranwal</title>
+<meta name="description" content="Selected websites and digital platforms designed and developed by Aadarsh Baranwal for clinics, businesses and brands.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0a0a;--panel:#131313;--ink:#f4efe2;--mute:rgba(244,239,226,.62);--line:rgba(244,239,226,.12);--y:#fce877;--r:18px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.55 'Space Grotesk','Helvetica Neue',Arial,sans-serif;overflow-x:hidden;padding-bottom:96px;-webkit-font-smoothing:antialiased}
+body.lock{overflow:hidden}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+.mono{font:500 11px 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase}
+
+/* hero */
+.hero{position:relative;padding:clamp(70px,14vh,150px) 0 clamp(36px,6vh,64px);overflow:hidden}
+.hero:before{content:"";position:absolute;width:720px;height:720px;right:-220px;top:-300px;background:radial-gradient(circle,rgba(252,232,119,.16),transparent 65%);pointer-events:none}
+.hero .mono{color:var(--y)}
+h1{font:800 clamp(52px,10.5vw,150px)/.9 'Syne',sans-serif;letter-spacing:-.05em;margin:18px 0 26px}
+h1 em{font:italic 400 1em 'Instrument Serif',serif;letter-spacing:-.02em;color:var(--y)}
+.hero-grid{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
+.hero .sub{font-size:clamp(18px,2vw,24px);line-height:1.4;max-width:560px}
+.hero .intro{margin-top:16px;color:var(--mute);max-width:520px}
+.stat{display:flex;gap:36px}
+.stat div{font:800 clamp(40px,5vw,64px)/1 'Syne',sans-serif;letter-spacing:-.05em}
+.stat small{display:block;margin-bottom:8px;font:500 11px 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+
+/* focus */
+:focus-visible{outline:2px solid var(--y);outline-offset:3px}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(36px,5vw,64px) clamp(20px,3vw,40px);padding:clamp(36px,6vh,64px) 0 clamp(60px,10vh,110px)}
+.card{display:block;width:100%;text-align:left;background:none;border:0;color:inherit;font:inherit;cursor:pointer;opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.card.in{opacity:1;transform:none}
+.card[hidden]{display:none}
+.shot{position:relative;aspect-ratio:16/10;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--panel);transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s,border-color .4s}
+.card:hover .shot,.card:focus-visible .shot{transform:translateY(-8px);box-shadow:0 30px 60px -20px rgba(0,0,0,.8),0 0 0 1px rgba(252,232,119,.45)}
+.chrome{position:absolute;inset:0 0 auto;height:28px;display:flex;align-items:center;gap:6px;padding:0 12px;background:rgba(0,0,0,.4);z-index:3}
+.chrome i{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5)}
+.chrome span{margin-left:8px;font:500 10px 'JetBrains Mono',monospace;color:rgba(255,255,255,.75);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.art{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:44px 24px 24px;text-align:center;z-index:1}
+.art:before{content:"";position:absolute;top:44px;left:7%;right:7%;height:7px;border-radius:4px;background:currentColor;opacity:.12;box-shadow:0 18px 0 -1px rgba(128,128,128,.12)}
+.art b{font:800 clamp(28px,4vw,52px)/.95 'Syne',sans-serif;letter-spacing:-.04em}
+.art small{margin-top:12px;font:500 11px 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;opacity:.7}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;z-index:2;transition:object-position 3.5s ease-in-out,transform .8s}
+.card:hover .shot img{object-position:bottom;transform:scale(1.02)}
+.pill{position:absolute;right:16px;bottom:16px;z-index:4;padding:10px 18px;border-radius:40px;background:var(--y);color:#0a0a0a;font-weight:700;font-size:13px;opacity:0;transform:translateY(10px);transition:.35s}
+.card:hover .pill,.card:focus-visible .pill{opacity:1;transform:none}
+.info{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:20px 4px 0}
+.info .mono{grid-column:1/-1;color:var(--mute);display:flex;justify-content:space-between}
+.info h3{font:700 clamp(24px,2.6vw,32px)/1.05 'Syne',sans-serif;letter-spacing:-.03em;margin-top:6px}
+.info p{grid-column:1;color:var(--mute);font-size:15px}
+.info .go{grid-row:2/4;grid-column:2;align-self:center;font-weight:600;font-size:14px;border-bottom:1px solid var(--y);padding-bottom:2px;white-space:nowrap;transition:color .25s}
+.card:hover .go{color:var(--y)}
+.empty{grid-column:1/-1;text-align:center;padding:60px 0;color:var(--mute)}
+
+/* closing */
+.end{text-align:center;padding:clamp(70px,14vh,150px) 0;border-top:1px solid var(--line)}
+.end h2{font:800 clamp(40px,7vw,96px)/.95 'Syne',sans-serif;letter-spacing:-.045em}
+.end h2 em{font:italic 400 1em 'Instrument Serif',serif;color:var(--y)}
+.end p{margin:20px auto 32px;color:var(--mute);max-width:460px}
+.btn{display:inline-block;padding:16px 32px;border-radius:40px;background:var(--y);color:#0a0a0a;font-weight:700;text-decoration:none;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 34px -10px rgba(252,232,119,.55)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);padding:14px 26px}
+.btn.ghost:hover{border-color:var(--y);box-shadow:none}
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:24px clamp(20px,5vw,56px);border-top:1px solid var(--line);color:var(--mute)}
+
+/* nav */
+.nav{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);z-index:30;display:flex;gap:2px;padding:6px;background:rgba(19,19,19,.9);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:40px;max-width:calc(100vw - 16px)}
+.nav a{text-decoration:none;font-size:14px;font-weight:600;padding:10px 18px;border-radius:30px;white-space:nowrap;transition:.2s}
+.nav a:hover,.nav a.on{background:var(--y);color:#0a0a0a}
+
+/* project overlay */
+.ov{position:fixed;inset:0;z-index:60;display:none;background:rgba(0,0,0,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.ov.open{display:block;animation:fade .3s}
+.sheet{position:absolute;inset:3vh 3vw;background:var(--bg);border:1px solid var(--line);border-radius:24px;overflow:auto;animation:rise .45s cubic-bezier(.2,.7,.2,1)}
+@keyframes fade{from{opacity:0}}@keyframes rise{from{transform:translateY(40px);opacity:0}}
+.top{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:rgba(10,10,10,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top div{display:flex;gap:8px}
+.top button{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:transparent;color:var(--ink);font-size:18px;cursor:pointer;transition:.2s}
+.top button:hover{background:var(--y);color:#0a0a0a;border-color:var(--y)}
+.det{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(24px,4vw,56px);padding:clamp(20px,4vw,48px)}
+.frames{display:grid;gap:20px;align-content:start}
+.frames .shot{box-shadow:none;transform:none!important}
+.side{position:sticky;top:90px;align-self:start}
+.side .mono{color:var(--y)}
+.side h2{font:800 clamp(34px,4.4vw,60px)/.95 'Syne',sans-serif;letter-spacing:-.045em;margin:12px 0 18px}
+.side h4{margin:24px 0 8px;color:var(--mute)}
+.side ul{list-style:none;display:grid;gap:8px}
+.side li{padding-left:22px;position:relative}
+.side li:before{content:"";position:absolute;left:0;top:.6em;width:10px;height:2px;background:var(--y)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font:500 12px 'JetBrains Mono',monospace;padding:5px 12px;border:1px solid var(--line);border-radius:30px}
+.acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+
+@media(max-width:900px){.det{grid-template-columns:1fr}.side{position:static;order:-1}}
+@media(max-width:720px){.gallery{grid-template-columns:1fr}.pill{opacity:1;transform:none}.nav a{padding:9px 11px;font-size:12.5px}.sheet{inset:0;border-radius:0}.stat{gap:24px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.card{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero"><div class="wrap">
+  <p class="mono">Portfolio '26 / '27</p>
+  <h1>Selected <em>Works</em></h1>
+  <div class="hero-grid">
+    <div>
+      <p class="sub">A collection of digital experiences, platforms and solutions I've designed and developed.</p>
+      <p class="intro">I'm Aadarsh, a freelance web developer. I design and build fast, responsive websites end to end for clinics, companies and brands. Every project below is live for a real client.</p>
+    </div>
+    <div class="stat"><div><small>Projects shown</small><span id="total">0</span></div><div><small>Clients served</small>25+</div></div>
+  </div>
+</div></header>
+
+<main class="wrap">
+  <div class="gallery" id="gallery"></div>
+  <section class="end">
+    <h2>Have a project <em>in mind?</em></h2>
+    <p>Let's build something your clients will trust and remember.</p>
+    <a class="btn" href="index.html#contact">Get in touch &rarr;</a>
+  </section>
+</main>
+
+<footer class="mono"><span>© Aadarsh Baranwal · All rights reserved</span><span>Web design &amp; development</span></footer>
+
+<nav class="nav" aria-label="Main">
+  <a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="selected-works.html" class="on">Works</a><a href="index.html#contact">Contact</a>
+</nav>
+
+<div class="ov" id="ov" role="dialog" aria-modal="true" aria-label="Project details"><div class="sheet" id="sheet"></div></div>
+
+<script>
+/* =====================================================================
+   PROJECTS: edit this array only.
+   i  = screenshot name: img/<i>.jpg (main), img/<i>-2.jpg, img/<i>-3.jpg (optional extra screens)
+   g  = categories (keys below)    y = year    u = live domain (omit if none)
+   bg/fg = placeholder colours shown until the screenshot exists
+   f  = key features (optional, falls back to the defaults per category)
+   ===================================================================== */
+const CATS = {health:'Healthcare & Clinics', corp:'Corporate Websites', shop:'E-commerce', admin:'Admin Dashboards & Management Systems', brand:'Personal Branding', mkt:'Marketing & Digital Platforms'};
+const FEAT = {
+  health:['Appointment booking and enquiry forms','Doctor profile, services and clinic details','Mobile-first, fast-loading layout','Content that is easy for the clinic to update'],
+  corp:['Credible, brand-led corporate design','Clear structure for services and information','Lightweight backend, easy to maintain','Fully responsive on every device'],
+  shop:['Product catalog with cart and checkout','Payment gateway integration','Premium storefront design','Responsive shopping on mobile'],
+  admin:['Secure admin panel for content updates','Centralised management of site data','Simple workflow for non-technical staff'],
+  brand:['Bold, personal visual identity','Clear presentation of services and work','Smooth interactions and animation'],
+  mkt:['Conversion-focused layout','Strong high-contrast branding','Built to promote services and campaigns']};
+const D = {c:'Healthcare', g:['health'], y:2026, st:['PHP','MySQL','Booking'], ov:'A clear, trustworthy site where patients can learn about the doctor, see services and book an appointment.'};
+const P = [
+ {n:'Neutronix Biotech',c:'Pharma',g:['corp','admin'],d:'Corporate website for a pharmaceutical company.',u:'neutronixbiotech.com',i:'neutronix',bg:'#060b1a',fg:'#e8eeff',st:['PHP','MySQL','Admin Panel'],ov:'A research-led pharma company needed a credible web presence with a product catalog its team can keep updating.',f:['Product catalog with detailed listings','Admin-managed content','Corporate design built to earn trust']},
+ {n:'N Square Media',c:'Personal Branding',g:['brand','mkt'],d:'Personal branding and influencer marketing website.',u:'nsquaremedia.in',i:'nsquaremedia',bg:'#050505',fg:'#d62f26',st:['HTML','CSS','JavaScript'],ov:'An influencer-marketing brand presented with a bold, high-contrast black and red identity.'},
+ {n:'O Shatika',c:'E-commerce',g:['shop'],d:'Online store for kurtis.',u:'oshatika.com',i:'oshatika',bg:'#120705',fg:'#ecdcb8',st:['PHP','MySQL','Payments'],ov:'A premium online store with a smooth path from browsing to payment.'},
+ {n:'Awakening Clinic',d:"Dr. Swaroop's psychiatry clinic website.",u:'drswaroopawakeningclinic.com',i:'awakening-clinic',bg:'#cddfd7',fg:'#1d4a4a',c:'Psychiatry'},
+ {n:'Niragas',c:"Children's Clinic",d:"Children's and neonatal clinic website.",u:'niragas.in',i:'niragas',bg:'#f3dcde',fg:'#a52f35'},
+ {n:'IPS Thane',c:'Community',g:['corp'],d:'Society website on a fast PHP backend.',u:'ipsthane.org',i:'ips-thane',bg:'#14283e',fg:'#fff',st:['PHP','MySQL'],ov:'A society site that stays quick and easy for the committee to maintain.'},
+ {n:'IPS Navi Mumbai',c:'Community',g:['corp'],d:'Society website for the Navi Mumbai chapter on a fast PHP backend.',u:'lightcoral-kangaroo-364057.hostingersite.com',i:'ips-navi-mumbai',bg:'#10303f',fg:'#fff',st:['PHP','MySQL'],ov:'A society website for the Navi Mumbai chapter that stays quick and easy for the committee to maintain.'},
+ {n:'Dr. Rakesh Lalla',c:'Doctor Branding',g:['health','brand'],d:'Personal website for Dr. Rakesh Lalla, Aurum Clinics.',u:'drrakeshlalla.in',i:'rakesh-lalla',bg:'#6b4f33',fg:'#fff'},
+ {n:'Doctors Galaxy Neo',d:'Multi-specialty clinic website in Thane with 19 doctors and online booking.',u:'lightslategray-oryx-208902.hostingersite.com',i:'doctors-galaxy-neo',bg:'#0b1b4a',fg:'#ff5a5f',ov:'A multi-doctor clinic site for Vartak Nagar, Thane, with doctor profiles, services, diagnostic tests, a gallery and a step-by-step appointment booking wizard.',f:['19 doctor profiles with specialities','Step-by-step appointment booking wizard','Services, diagnostic tests and photo gallery','Navy, red and teal brand design']},
+ {n:'Doctors Galaxy',d:'Multi-doctor clinic site with a step-by-step booking wizard.',i:'doctors-galaxy',bg:'#0b1b4a',fg:'#fff',ov:'A multi-doctor clinic site with doctors, tests and a step-by-step appointment booking wizard.'},
+ {n:'Dr. Bhushan Patil',c:'Psychiatry',g:['health','admin'],d:'Psychiatrist website with multiple Kalyan centres.',u:'drbhushanpatil.com',i:'bhushan-patil',bg:'#1f5a3a',fg:'#fff',ov:'A doctor site with centres, blog and appointment form, managed from a multi-site admin panel.'},
+ {n:'Dr. Sayali Dhake',c:'Diabetology',d:'Clinic website for Dr. Sayali Dhake, Dombivli East.',u:'drsayalipradeepdhake.com',i:'sayali-dhake',bg:'#1f5a3a',fg:'#fff'},
+ {n:'Dr. Suraj Shrestha',c:'Neurology',d:'Neurology clinic website for Dr. Suraj Shrestha.',u:'drsurajshresthaneuro.com',i:'suraj-shrestha',bg:'#e8f0e6',fg:'#1f4a3a'},
+ {n:'Dr. Yeshwant Solanki',c:'Psychiatry',d:'Neuropsychiatrist website in Mumbai.',u:'dryeshwantpsychiatrist.com',i:'yeshwant-solanki',bg:'#f1efe6',fg:'#2b4a3d'},
+ {n:'Dr. Nikhil Sharma',c:'Orthopaedics',d:'Orthopaedic surgeon website, Swastik Hospital, Ulhasnagar.',u:'drnikhilsharmaorthopaedic.com',i:'nikhil-sharma',bg:'#1f5a45',fg:'#fff'},
+ {n:'Dr. Gaurav Trivedy',c:'Psychiatry',d:'Psychiatry clinic website in Kalyan.',u:'drgauravtrivedy.com',i:'gaurav-trivedy',bg:'#f3e6d3',fg:'#7a1f2b'},
+ {n:'Dr. Ayushi Shukla',c:'Psychiatry',g:['health','brand'],d:'Personal website for Dr. Ayushi Shukla.',u:'drayushishukla.com',i:'ayushi-shukla',bg:'#bcd8d6',fg:'#14484d'},
+ {n:'Dr. Varsha Dawani',c:'Psychiatry',g:['health','brand'],d:'Personal website for Dr. Varsha Shyam Dawani.',u:'drvarshadawani.com',i:'varsha-dawani',bg:'#c23b3b',fg:'#fff'},
+ {n:'Dr. Deepa Reddy',d:'Doctor website with a deep navy, editorial look.',u:'drdeepareddy.com',i:'deepa-reddy',bg:'#0b1b4a',fg:'#fff'},
+ {n:'Dr. Divya Umakanth',c:'Psychiatry',d:'Mental wellness and rehab clinic website.',i:'divya-umakanth',bg:'#eef0e6',fg:'#2b4a3d'},
+ {n:'Dr. Imtiyaz Kazi',c:'Orthopaedics',d:'Surgeon website with hospital attachments and testimonials.',u:'drimtiyazkazi.com',i:'imtiyaz-kazi',bg:'#1d5fc4',fg:'#fff'},
+ {n:'Dr. Priyanka Patil',d:'General physician website in Dombivli.',u:'drpriyankapatil.com',i:'priyanka-patil',bg:'#1f5a45',fg:'#fff',ov:'A doctor site with an appointment wizard: hospital selection, time slots and guest entry.'},
+ {n:'Dr. Aaliya Kazi',d:'Clinic website for Dr. Aaliya Kazi.',u:'draaliyakazi.com',i:'aaliya-kazi',bg:'#3f7a4a',fg:'#fff'},
+ {n:'Mighty Minds Clinic',c:'Mental Health',d:'Mental health care clinic website.',u:'mightymindclinic.com',i:'mighty-minds',bg:'#efeadf',fg:'#2b4a3d'}
+].map(p => ({...D, ...p}));
+
+const $ = s => document.querySelector(s), esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let view = P, cur = 0, last = null;
+
+/* a screenshot frame: placeholder art underneath, real image on top once it exists */
+function frame(p, img, label, optional, extra=''){
+  return `<div class="shot"><div class="chrome"><i></i><i></i><i></i><span>${esc(p.u || 'coming soon')}</span></div>
+  <div class="art" style="background:${p.bg};color:${p.fg}"><b>${esc(p.n)}</b><small>${esc(label || p.c)}</small></div>
+  <img src="img/${esc(img)}.jpg" alt="${esc(p.n)} website screenshot" loading="lazy" onerror="${optional ? 'this.closest(\'.shot\').remove()' : 'this.remove()'}">${extra}</div>`;
+}
+
+/* gallery */
+const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), {threshold:.12});
+function render(){
+  view = P;
+  $('#gallery').innerHTML = view.length ? view.map((p,n) => `<button class="card" data-n="${n}" style="transition-delay:${(n%2)*90}ms" aria-label="View ${esc(p.n)}">
+    ${frame(p, p.i, '', 0, '<span class="pill">View Project &rarr;</span>')}
+    <div class="info"><span class="mono"><span>${esc(p.c)}</span><span>${p.y}</span></span><h3>${esc(p.n)}</h3><p>${esc(p.d)}</p><span class="go">View Project &rarr;</span></div></button>`).join('')
+    : '<p class="empty">New projects in this category are coming soon.</p>';
+  document.querySelectorAll('.card').forEach(c => io.observe(c));
+}
+$('#gallery').onclick = e => { const c = e.target.closest('.card'); if(c){ last = c; open(+c.dataset.n); } };
+$('#total').textContent = P.length;
+
+/* detail overlay */
+const ov = $('#ov'), sheet = $('#sheet');
+function open(n){
+  cur = (n + view.length) % view.length; const p = view[cur];
+  const feats = p.f || [...new Set(p.g.flatMap(k => FEAT[k] || []))].slice(0,5);
+  sheet.innerHTML = `<div class="top"><span class="mono">${String(cur+1).padStart(2,'0')} / ${String(view.length).padStart(2,'0')}</span>
+    <div><button id="pv" aria-label="Previous project">&larr;</button><button id="nx" aria-label="Next project">&rarr;</button><button id="cl" aria-label="Close">&times;</button></div></div>
+    <div class="det"><div class="frames">${frame(p,p.i)}${frame(p,p.i+'-2','Screen 2',1)}${frame(p,p.i+'-3','Screen 3',1)}</div>
+    <aside class="side"><p class="mono">${p.g.map(k=>CATS[k]).join(' · ')} · ${p.y}</p><h2>${esc(p.n)}</h2><p>${esc(p.ov || p.d)}</p>
+    <h4 class="mono">Key features</h4><ul>${feats.map(f=>`<li>${esc(f)}</li>`).join('')}</ul>
+    <h4 class="mono">Built with</h4><div class="chips">${p.st.map(s=>`<span>${esc(s)}</span>`).join('')}</div>
+    <div class="acts">${p.u ? `<a class="btn" href="https://${esc(p.u)}" target="_blank" rel="noopener">Visit live site &nearr;</a>` : '<span class="btn ghost">Link coming soon</span>'}<a class="btn ghost" href="index.html#contact">Start a project</a></div></aside></div>`;
+  ov.classList.add('open'); document.body.classList.add('lock'); sheet.scrollTop = 0; $('#cl').focus();
+  $('#pv').onclick = () => open(cur-1); $('#nx').onclick = () => open(cur+1); $('#cl').onclick = close;
+}
+function close(){ ov.classList.remove('open'); document.body.classList.remove('lock'); last && last.focus(); }
+ov.onclick = e => { if(e.target === ov) close(); };
+addEventListener('keydown', e => { if(!ov.classList.contains('open')) return;
+  if(e.key==='Escape') close(); if(e.key==='ArrowRight') open(cur+1); if(e.key==='ArrowLeft') open(cur-1); });
+
+render();
+</script>
+</body>
+</html>
